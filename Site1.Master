@@ -1,0 +1,127 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site1.Master.cs" Inherits="OrthopedicKalyan.Site1" %>
+
+<!DOCTYPE html>
+<html lang="en">
+<head runat="server">
+    <meta charset="UTF-8" />
+    <title>Orthopedic in Kalyan - Best Bone & Joint Specialist</title>
+
+    <!-- SEO Tags -->
+    <meta name="description" content="Consult the best orthopedic doctor in Kalyan for joint pain, fractures, and sports injuries." />
+    <meta name="keywords" content="Orthopedic Kalyan, Bone Doctor, Joint Specialist, Kalyan Clinic" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+     <!-- Bootstrap 5 CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.slim.min.js"></script>
+
+    <!-- Font Awesome (for icons) -->
+    <link href="fontawesome-free-6.7.2-web/fontawesome/css/all.css" rel="stylesheet" />
+
+    <style>
+        body {
+            padding-top: 90px;
+        }
+        .navbar-brand {
+            font-weight: bold;
+            font-size: 1.4rem;
+        }
+        .footer {
+            background-color: #f8f9fa;
+            padding: 20px 0;
+            margin-top: 40px;
+            border-top: 1px solid #ddd;
+        }
+        .contact-buttons a {
+            min-width: 140px;
+        }
+        .map-container iframe {
+            width: 100%;
+            height: 300px;
+            border: none;
+            border-radius: 8px;
+        }
+        .summary-text {
+            display: -webkit-box;
+            -webkit-line-clamp: 2;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            transition: all 0.3s ease;
+        }
+
+        .summary-text.expanded {
+            -webkit-line-clamp: unset;
+            white-space: normal;
+        }
+
+        .read-more-link {
+            color: blue;
+            cursor: pointer;
+            text-decoration: underline;
+            display: inline-block;
+            margin-top: 4px;
+        }
+    </style>
+</head>
+
+<body>
+    <form id="form1" runat="server">
+        <!-- Navbar -->
+        <nav class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top shadow">
+    <div class="container">
+        <a class="navbar-brand" href="#">
+            <img src="images/images__10_-Picsart-AiImageEnhancer.jpeg-removebg-preview.png" style="height: 45px; width: 45px" />
+        </a>
+        <a class="navbar-brand" href="Home.aspx">OrthoCare Kalyan</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="Home.aspx">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="Blog.aspx">Blog</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="Contact.aspx">Contact</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+        <!-- Main Content -->
+        <div class="container">
+            <asp:ContentPlaceHolder ID="MainContent" runat="server" />
+        </div>
+
+        <!-- Contact Buttons -->
+        <div class="container text-center contact-buttons mt-5">
+            <h5 class="mb-3">Get in Touch</h5>
+            <a href="tel:+918485034724" class="btn btn-outline-primary m-2"><i class="fas fa-phone"></i> Call Us</a>
+            <a href="https://wa.me/918485034724" target="_blank" class="btn btn-outline-success m-2"><i class="fab fa-whatsapp"></i> WhatsApp</a>
+        </div>
+
+        <!-- Google Maps -->
+        <div class="container mt-4 map-container">
+            <h5 class="mb-3">Clinic Location</h5>
+            <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3768.1310794713484!2d73.12968021481262!3d19.218330850416936!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7941e28d3f47b%3A0x8a2877bb3ae4d1c4!2sKalyan%2C%20Maharashtra!5e0!3m2!1sen!2sin!4v1615908852291!5m2!1sen!2sin"
+                allowfullscreen="" loading="lazy">
+            </iframe>
+        </div>
+
+        <!-- Footer -->
+        <footer class="footer text-center mt-5">
+            <div class="container">
+                <p class="mb-1">&copy; 2025 OrthoCare Kalyan. All rights reserved.</p>
+                <small>Designed with care for your bones 🦴</small>
+            </div>
+        </footer>
+    </form>
+</body>
+</html>
